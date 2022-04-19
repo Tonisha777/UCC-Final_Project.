@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">My UCC Final Project Application</string>
+    <string name="Facebook">Facebook</string>
+    <string name="Twitter">Twitter</string>
+    <string name="Instagram">Instagram</string>
+    <string name="UCC_Social_Media_Sites">UCC Social Media Accounts</string>
+    <string name="Back">Back</string>
+    <string name="Admissions_Requirements">Admissions Requirements</string>
+    <string name="text">Text</string>
+    <string name="Insert">Insert</string>
+    <string name="GetData">Get Data</string>
+    <string name="course_code">Course Code</string>
+    <string name="course_name">Course Name</string>
+    <string name="course_credits">Course Credits</string>
+    <string name="course_description">Course Description</string>
+    <string name="course_prerequistes">Course Pre-requistes</string>
+    <string name="day">Day</string>
+    <string name="time">Time</string>
+    <string name="Code">Code</string>
+    <string name="Name">Name</string>
+    <string name="Credits">Credits</string>
+    <string name="Pre_requistes">Pre-requistes</string>
+    <string name="Description">Description</string>
+
+    <string-array name="faculty">
+        <item>ROSE, Natalie</item>
+        <item>DAVIDSON, Sonia</item>
+        <item>AMONDE, Tom</item>
+        <item>MILLER, Ionie</item>
+        <item>NDAJAH, Peter</item>
+    </string-array>
+
+    <string-array name="time">
+        <item>Programming Design Using Java</item>
+        <item>Database Management Systems I</item>
+        <item>Internet Authoring I</item>
+        <item>Data Communications and Networks II</item>
+        <item>Computer Essentials and Troubleshooting</item>
+        <item>Project +</item>
+        <item>Mobile Application Development</item>
+        <item>Internet Authoring II</item>
+        <item>Database Management Systems II</item>
+        <item>Programming Techniques</item>
+    </string-array>
+</resources>

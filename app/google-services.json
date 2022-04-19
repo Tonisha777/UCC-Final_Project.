@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "249413236993",
+    "project_id": "my-ucc-final-project-app",
+    "storage_bucket": "my-ucc-final-project-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:249413236993:android:ec54b73baf4468247e4300",
+        "android_client_info": {
+          "package_name": "com.example.myuccfinalprojectapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "249413236993-a36l9bh2hb7lj84hgo7ur3fi77srkvoh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCy_Uu92R8JT5QpT5gdAdFyqZbL8aN-M48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "249413236993-a36l9bh2hb7lj84hgo7ur3fi77srkvoh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".Data">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Course Information"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.047" />
+
+        <EditText
+            android:id="@+id/etcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginTop="20dp"
+            android:hint="code"
+            android:inputType="text"
+            android:singleLine="true"
+
+            />
+
+        <EditText
+            android:id="@+id/etname"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:layout_marginHorizontal="30sp"
+            android:hint="name"
+            android:inputType="text"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            />
+
+        <EditText
+            android:id="@+id/etcredits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginTop="30dp"
+            android:hint="credits"
+            android:inputType="text"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/etprerequistes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginTop="30dp"
+            android:hint="pre-requistes"
+            android:inputType="text"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/etdesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginTop="30dp"
+            android:hint="description"
+            android:inputType="textMultiLine"
+            android:singleLine="true" />
+
+
+        <Button
+            android:id="@+id/insertbtn"
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginTop="40dp"
+            android:text="@string/Insert" />
+
+        <Button
+            android:id="@+id/fetchbtn"
+            android:layout_width="139dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30sp"
+            android:text="@string/GetData"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvCourses" />
+
+</LinearLayout>
+
