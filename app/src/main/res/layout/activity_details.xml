@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:text="TextView"
+        android:text="@string/textview"
         android:textAlignment="textStart"
         android:textSize="20sp"
         android:textColor="@color/black"
@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        android:text="TextView"
+        android:text="@string/textview"
         android:autoLink="email"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -55,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        android:text="TextView"
+        android:text="@string/textview"
         android:textColor="@color/black"
         android:autoLink="phone"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -64,21 +64,6 @@
         app:layout_constraintStart_toEndOf="@+id/ivProfile"
         app:layout_constraintTop_toBottomOf="@+id/tvEmail"
         app:layout_constraintVertical_bias="0.075" />
-
-    <Button
-        android:id="@+id/bACKbtn"
-        android:layout_width="286dp"
-        android:layout_height="59dp"
-        android:text="@string/Back"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.97" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

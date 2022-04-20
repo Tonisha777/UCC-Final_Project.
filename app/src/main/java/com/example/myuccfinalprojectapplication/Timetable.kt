@@ -27,17 +27,25 @@ class Timetable : AppCompatActivity() {
             //Displays a message showing list item index
             Toast.makeText(this, "Clicked item : "+position, Toast.LENGTH_SHORT).show()
             //Specifies which activity should be launched
-            val intent = Intent(this, TimeTableDetails::class.java);
-            //Stores index number to be shared with Details activity
-            intent.putExtra("listIndex1", position.toString());
+            val intent = Intent(this, TimeTableDetails::class.java)
+            //Stores index number to be shared with Timetable Details activity
+            intent.putExtra("listIndex1", position.toString())
             //Starts activity
-            this.startActivity(intent);
-        }
-        val bkbutton: Button = findViewById(R.id.bkbutton)
-        bkbutton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            this.startActivity(intent)
         }
 
+        ///Action bar
+        val actionBar = supportActionBar
+
+        //actionbar title
+        actionBar!!.title = "UCC Spring Courses Timetable"
+
+        //back button
+        actionBar.setDisplayHomeAsUpEnabled(true)
+
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

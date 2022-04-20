@@ -27,16 +27,23 @@ class Data : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_data)
 
-        fetchbtn = findViewById(R.id.fetchbtn)
-        fetchbtn.setOnClickListener {
-            startActivity(Intent(this, Courses::class.java))
-        }
-
 
         insertbtn = findViewById(R.id.insertbtn)
         insertbtn.setOnClickListener {
             saveCourseData()
 
+        }
+        ///Action bar
+        val actionBar = supportActionBar
+
+        //actionbar title
+        actionBar!!.title = "Courses Data"
+
+        //back button
+        val backbtn: Button = findViewById(R.id.backbtn)
+        backbtn.setOnClickListener{
+            val intent = Intent(this, Courses::class.java)
+            startActivity(intent)
         }
 
         etcode = findViewById(R.id.etcode)
@@ -50,6 +57,7 @@ class Data : AppCompatActivity() {
 
 
         }
+
     private fun saveCourseData(){
         //getting values
         val code = etcode.text.toString()

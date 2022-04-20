@@ -17,11 +17,14 @@ class Admissions : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_admissions)
 
-        val bckbtn: Button = findViewById(R.id.bckbtn)
-        bckbtn.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+        ///Action bar
+        val actionBar = supportActionBar
+
+        //actionbar title
+        actionBar!!.title = "UCC Admission Information"
+
+        //back button
+        actionBar.setDisplayHomeAsUpEnabled(true)
 
         //Creates objects for each activity element
         val ad1: TextView = findViewById(R.id.tvAdmissions1)
@@ -39,6 +42,10 @@ class Admissions : AppCompatActivity() {
                 "---\n" +
                 "\n" +
                 "To apply visit this link: https://ucc.edu.jm/apply/"
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
 }

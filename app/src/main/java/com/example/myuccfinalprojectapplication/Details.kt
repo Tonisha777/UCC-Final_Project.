@@ -13,11 +13,14 @@ class Details : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details)
 
-        val bACKbtn: Button = findViewById(R.id.bACKbtn)
-        bACKbtn.setOnClickListener {
-            val intent = Intent(this, Directory::class.java)
-            startActivity(intent)
-        }
+        ///Action bar
+        val actionBar = supportActionBar
+
+        //actionbar title
+        actionBar!!.title = "Directory Details"
+
+        //back button
+        actionBar.setDisplayHomeAsUpEnabled(true)
 
         //Gets value sent from Directory activity
         val index: String? = this.intent.getStringExtra("listIndex")
@@ -62,5 +65,9 @@ class Details : AppCompatActivity() {
             }
         }
 
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

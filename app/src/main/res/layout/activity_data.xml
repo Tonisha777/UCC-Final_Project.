@@ -12,7 +12,7 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Course Information"
+            android:text="@string/course_information"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="30sp"
             android:layout_marginTop="20dp"
-            android:hint="code"
+            android:hint="@string/code"
             android:inputType="text"
             android:singleLine="true"
 
@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:singleLine="true"
             android:layout_marginHorizontal="30sp"
-            android:hint="name"
+            android:hint="@string/name"
             android:inputType="text"
             android:layout_marginTop="20dp"
             android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="30sp"
             android:layout_marginTop="30dp"
-            android:hint="credits"
+            android:hint="@string/credits"
             android:inputType="text"
             android:singleLine="true" />
 
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="30sp"
             android:layout_marginTop="30dp"
-            android:hint="pre-requistes"
+            android:hint="@string/pre_requistes"
             android:inputType="text"
             android:singleLine="true" />
 
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="30sp"
             android:layout_marginTop="30dp"
-            android:hint="description"
+            android:hint="@string/description"
             android:inputType="textMultiLine"
             android:singleLine="true" />
 
@@ -84,15 +84,11 @@
             android:text="@string/Insert" />
 
         <Button
-            android:id="@+id/fetchbtn"
-            android:layout_width="139dp"
+            android:id="@+id/backbtn"
+            android:layout_width="138dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="30sp"
-            android:text="@string/GetData"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rvCourses" />
-
+            android:layout_marginTop="40dp"
+            android:text="@string/Back" />
 </LinearLayout>
 

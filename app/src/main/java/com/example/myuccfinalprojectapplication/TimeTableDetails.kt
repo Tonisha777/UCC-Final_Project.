@@ -13,11 +13,14 @@ class TimeTableDetails : AppCompatActivity() {
         setContentView(R.layout.activity_time_table_details)
 
 
-        val button: Button = findViewById(R.id.bACKbtn)
-        button.setOnClickListener {
-            val intent = Intent(this, Timetable::class.java)
-            startActivity(intent)
-        }
+        ///Action bar
+        val actionBar = supportActionBar
+
+        //actionbar title
+        actionBar!!.title = " Spring Courses TimeTable Details"
+
+        //back button
+        actionBar.setDisplayHomeAsUpEnabled(true)
 
         //Gets value sent from Timetable activity
         val index: String? = this.intent.getStringExtra("listIndex1")
@@ -83,6 +86,10 @@ class TimeTableDetails : AppCompatActivity() {
                 time.text = "2:00pm - 4:00pm"
             }
         }
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
         }
 

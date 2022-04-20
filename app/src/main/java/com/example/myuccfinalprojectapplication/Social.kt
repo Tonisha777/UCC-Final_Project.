@@ -25,11 +25,18 @@ class Social : AppCompatActivity() {
         val webSettings = web.settings
         webSettings.javaScriptEnabled = true
 
-        val sbtn: Button = findViewById(R.id.sbtn)
-        sbtn.setOnClickListener {
-            val intent = Intent(this, Media::class.java)
-            startActivity(intent)
-        }
+        ///Action bar
+        val actionBar = supportActionBar
+
+        //actionbar title
+        actionBar!!.title = "UCC Instagram Page"
+
+        //back button
+        actionBar.setDisplayHomeAsUpEnabled(true)
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }
 //Allows external website to load within WebView element
@@ -55,4 +62,6 @@ class CustomWebViewClient internal constructor(private val activity: Activity) :
     ) {
         Toast.makeText(activity, "Error! $error", Toast.LENGTH_SHORT).show()
     }
+
+
 }

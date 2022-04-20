@@ -28,17 +28,24 @@ class Directory : AppCompatActivity() {
             //Displays a message showing list item index
             Toast.makeText(this, "Clicked item : "+position, Toast.LENGTH_SHORT).show()
             //Specifies which activity should be launched
-            val intent = Intent(this, Details::class.java);
+            val intent = Intent(this, Details::class.java)
             //Stores index number to be shared with Details activity
-            intent.putExtra("listIndex", position.toString());
+            intent.putExtra("listIndex", position.toString())
             //Starts activity
-            this.startActivity(intent);
+            this.startActivity(intent)
         }
-        val bkbtn: Button = findViewById(R.id.bkbtn)
-        bkbtn.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+        ///Action bar
+        val actionBar = supportActionBar
 
+        //actionbar title
+        actionBar!!.title = "UCC Directory"
+
+        //back button
+        actionBar.setDisplayHomeAsUpEnabled(true)
+
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

@@ -24,8 +24,15 @@ class Courses : AppCompatActivity() {
         setContentView(R.layout.activity_courses)
 
 
-        val bACKbtn: Button = findViewById(R.id.bACKbutton)
-        bACKbtn.setOnClickListener {
+        ///Action bar
+        val actionBar = supportActionBar
+
+        //actionbar title
+        actionBar!!.title = "UCC Spring Courses"
+
+        //back button
+        val bkbtn: Button = findViewById(R.id.bkbtn)
+        bkbtn.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
@@ -46,6 +53,10 @@ class Courses : AppCompatActivity() {
 
         getCourseData()
 
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
     private fun getCourseData(){

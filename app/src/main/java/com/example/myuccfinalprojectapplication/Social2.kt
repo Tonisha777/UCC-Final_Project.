@@ -25,14 +25,21 @@ class Social2 : AppCompatActivity() {
         val web2Settings = web2.settings
         web2Settings.javaScriptEnabled = true
 
-        val mbtn: Button = findViewById(R.id.mbtn)
-        mbtn.setOnClickListener {
-            val intent = Intent(this, Media::class.java)
-            startActivity(intent)
-        }
+        ///Action bar
+        val actionBar = supportActionBar
 
+        //actionbar title
+        actionBar!!.title = "UCC Facebook Page"
+
+        //back button
+        actionBar.setDisplayHomeAsUpEnabled(true)
+        }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
-}
+    }
+
 //Allows external website to load within WebView element
 class CustomWebViewClient2 internal constructor(private val activity: Activity) :
     WebViewClient() {
@@ -56,4 +63,5 @@ class CustomWebViewClient2 internal constructor(private val activity: Activity) 
     ) {
         Toast.makeText(activity, "Error! $error", Toast.LENGTH_SHORT).show()
     }
+
 }
