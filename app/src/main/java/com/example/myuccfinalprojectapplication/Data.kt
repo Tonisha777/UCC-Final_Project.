@@ -5,10 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.database.*
-import com.google.firebase.ktx.Firebase
+
 
 class Data : AppCompatActivity() {
 
@@ -18,8 +17,7 @@ class Data : AppCompatActivity() {
     private lateinit var etprerequistes: EditText
     private lateinit var etdesc: EditText
     private lateinit var insertbtn: Button
-    private lateinit var bbtn: Button
-    private lateinit var fetchbtn: Button
+    private lateinit var backbtn: Button
 
     private lateinit var dbRef: DatabaseReference
 
@@ -33,18 +31,13 @@ class Data : AppCompatActivity() {
             saveCourseData()
 
         }
-        ///Action bar
-        val actionBar = supportActionBar
 
-        //actionbar title
-        actionBar!!.title = "Courses Data"
-
-        //back button
-        val backbtn: Button = findViewById(R.id.backbtn)
+        /*back button
+        backbtn = findViewById(R.id.backbtn)
         backbtn.setOnClickListener{
             val intent = Intent(this, Courses::class.java)
             startActivity(intent)
-        }
+        }*/
 
         etcode = findViewById(R.id.etcode)
         etname = findViewById(R.id.etname)

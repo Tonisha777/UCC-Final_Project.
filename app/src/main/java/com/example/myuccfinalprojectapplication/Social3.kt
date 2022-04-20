@@ -14,6 +14,8 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 
 class Social3 : AppCompatActivity() {
+    private lateinit var bACkbtn:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_social3)
@@ -25,18 +27,12 @@ class Social3 : AppCompatActivity() {
         val webSettings3 = web3.settings
         webSettings3.javaScriptEnabled = true
 
-        ///Action bar
-        val actionBar = supportActionBar
-
-        //actionbar title
-        actionBar!!.title = "UCC Twitter Page"
-
         //back button
-        actionBar.setDisplayHomeAsUpEnabled(true)
-    }
-    override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
-        return true
+        bACkbtn = findViewById(R.id.bACkbtn)
+        bACkbtn.setOnClickListener{
+            val intent = Intent(this, Media::class.java)
+            startActivity(intent)
+        }
     }
 }
 //Allows external website to load within WebView element

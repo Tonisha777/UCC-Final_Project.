@@ -8,18 +8,17 @@ import android.widget.Button
 import android.widget.ImageButton
 
 class Media : AppCompatActivity() {
+    private lateinit var btn:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_media)
 
-        ///Action bar
-        val actionBar = supportActionBar
-
-        //actionbar title
-        actionBar!!.title = "UCC Social Media"
-
         //back button
-            actionBar.setDisplayHomeAsUpEnabled(true)
+        btn = findViewById(R.id.btn)
+        btn.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
 
 
@@ -45,8 +44,4 @@ class Media : AppCompatActivity() {
 
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-       onBackPressed()
-        return true
-    }
         }

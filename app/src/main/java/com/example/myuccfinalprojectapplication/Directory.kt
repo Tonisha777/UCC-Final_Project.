@@ -10,6 +10,8 @@ import android.widget.Toast
 
 
 class Directory : AppCompatActivity() {
+    private lateinit var bAckbtn:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_directory)
@@ -34,18 +36,13 @@ class Directory : AppCompatActivity() {
             //Starts activity
             this.startActivity(intent)
         }
-        ///Action bar
-        val actionBar = supportActionBar
-
-        //actionbar title
-        actionBar!!.title = "UCC Directory"
-
         //back button
-        actionBar.setDisplayHomeAsUpEnabled(true)
+        bAckbtn= findViewById(R.id.bAckbtn)
+        bAckbtn.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
     }
-    override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
-        return true
-    }
+
 }

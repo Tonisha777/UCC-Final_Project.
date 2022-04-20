@@ -55,5 +55,17 @@
         app:layout_constraintTop_toBottomOf="@+id/tvCourses"
         app:layout_constraintVertical_bias="0.419" />
 
+    <Button
+        android:id="@+id/abtn"
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30sp"
+        android:text="@string/Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime"
+        app:layout_constraintVertical_bias="0.421" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

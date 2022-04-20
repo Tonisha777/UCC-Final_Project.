@@ -10,17 +10,25 @@
 
     <WebView
         android:id="@+id/wvMedia"
-        android:layout_width="419dp"
-        android:layout_height="598dp"
+        android:layout_width="417dp"
+        android:layout_height="483dp"
         android:fitsSystemWindows="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.01"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-
-
+    <Button
+        android:id="@+id/bKbtn"
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginTop="32dp"
+        android:text="@string/Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wvMedia" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

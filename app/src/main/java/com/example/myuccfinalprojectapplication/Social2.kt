@@ -14,6 +14,8 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 
 class Social2 : AppCompatActivity() {
+    private lateinit var bKbtn:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_social2)
@@ -25,19 +27,13 @@ class Social2 : AppCompatActivity() {
         val web2Settings = web2.settings
         web2Settings.javaScriptEnabled = true
 
-        ///Action bar
-        val actionBar = supportActionBar
-
-        //actionbar title
-        actionBar!!.title = "UCC Facebook Page"
-
         //back button
-        actionBar.setDisplayHomeAsUpEnabled(true)
+        bKbtn = findViewById(R.id.bKbtn)
+        bKbtn.setOnClickListener{
+            val intent = Intent(this, Media::class.java)
+            startActivity(intent)
         }
-    override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
-        return true
-    }
+        }
     }
 
 //Allows external website to load within WebView element

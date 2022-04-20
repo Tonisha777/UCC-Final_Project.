@@ -13,18 +13,18 @@ import android.widget.TextView
 
 class Admissions : AppCompatActivity() {
 
+    private lateinit var bbtn: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_admissions)
 
-        ///Action bar
-        val actionBar = supportActionBar
-
-        //actionbar title
-        actionBar!!.title = "UCC Admission Information"
-
         //back button
-        actionBar.setDisplayHomeAsUpEnabled(true)
+        bbtn = findViewById(R.id.bbtn)
+        bbtn.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
         //Creates objects for each activity element
         val ad1: TextView = findViewById(R.id.tvAdmissions1)
@@ -43,9 +43,6 @@ class Admissions : AppCompatActivity() {
                 "\n" +
                 "To apply visit this link: https://ucc.edu.jm/apply/"
     }
-    override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
-        return true
-    }
+
 
 }

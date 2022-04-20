@@ -8,19 +8,18 @@ import android.widget.ImageView
 import android.widget.TextView
 
 class TimeTableDetails : AppCompatActivity() {
+    private lateinit var abtn:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_time_table_details)
 
 
-        ///Action bar
-        val actionBar = supportActionBar
-
-        //actionbar title
-        actionBar!!.title = " Spring Courses TimeTable Details"
-
         //back button
-        actionBar.setDisplayHomeAsUpEnabled(true)
+        abtn = findViewById(R.id.abtn)
+        abtn.setOnClickListener{
+            val intent = Intent(this, Timetable::class.java)
+            startActivity(intent)
+        }
 
         //Gets value sent from Timetable activity
         val index: String? = this.intent.getStringExtra("listIndex1")
@@ -86,10 +85,6 @@ class TimeTableDetails : AppCompatActivity() {
                 time.text = "2:00pm - 4:00pm"
             }
         }
-    }
-    override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
-        return true
     }
         }
 

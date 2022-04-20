@@ -9,6 +9,8 @@ import android.widget.ListView
 import android.widget.Toast
 
 class Timetable : AppCompatActivity() {
+    private  lateinit var cbtn:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_timetable)
@@ -34,14 +36,12 @@ class Timetable : AppCompatActivity() {
             this.startActivity(intent)
         }
 
-        ///Action bar
-        val actionBar = supportActionBar
-
-        //actionbar title
-        actionBar!!.title = "UCC Spring Courses Timetable"
-
         //back button
-        actionBar.setDisplayHomeAsUpEnabled(true)
+        cbtn = findViewById(R.id.cbtn)
+        cbtn.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
     }
     override fun onSupportNavigateUp(): Boolean {

@@ -14,6 +14,8 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 
 class Social : AppCompatActivity() {
+    private lateinit var kbtn:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_social)
@@ -25,19 +27,14 @@ class Social : AppCompatActivity() {
         val webSettings = web.settings
         webSettings.javaScriptEnabled = true
 
-        ///Action bar
-        val actionBar = supportActionBar
-
-        //actionbar title
-        actionBar!!.title = "UCC Instagram Page"
-
         //back button
-        actionBar.setDisplayHomeAsUpEnabled(true)
+        kbtn = findViewById(R.id.kbtn)
+        kbtn.setOnClickListener{
+            val intent = Intent(this, Media::class.java)
+            startActivity(intent)
+        }
     }
-    override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
-        return true
-    }
+
 }
 //Allows external website to load within WebView element
 class CustomWebViewClient internal constructor(private val activity: Activity) :

@@ -9,18 +9,17 @@ import android.widget.ImageView
 import android.widget.TextView
 
 class Details : AppCompatActivity() {
+    private lateinit var bACKbtn: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details)
 
-        ///Action bar
-        val actionBar = supportActionBar
-
-        //actionbar title
-        actionBar!!.title = "Directory Details"
-
         //back button
-        actionBar.setDisplayHomeAsUpEnabled(true)
+        bACKbtn = findViewById(R.id.bACKbtn)
+        bACKbtn.setOnClickListener{
+            val intent = Intent(this, Directory::class.java)
+            startActivity(intent)
+        }
 
         //Gets value sent from Directory activity
         val index: String? = this.intent.getStringExtra("listIndex")
@@ -66,8 +65,5 @@ class Details : AppCompatActivity() {
         }
 
     }
-    override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
-        return true
-    }
+
 }
