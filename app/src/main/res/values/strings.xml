@@ -21,6 +21,18 @@
     <string name="Credits">Credits</string>
     <string name="Pre_requistes">Pre-requistes</string>
     <string name="Description">Description</string>
+    <string name="textview">TextView</string>
+    <string name="textview">TextView</string>
+    <string name="textview">TextView</string>
+    <string name="courses_timetable">Courses TimeTable</string>
+    <string name="faculty_directory">Faculty Directory</string>
+    <string name="course_information">Course Information</string>
+    <string name="name">name</string>
+    <string name="code">code</string>
+    <string name="pre_requistes">pre-requistes</string>
+    <string name="credits">credits</string>
+    <string name="description">description</string>
+    <string name="loading_data">Loading Data....</string>
 
     <string-array name="faculty">
         <item>ROSE, Natalie</item>
